@@ -6,6 +6,7 @@ variable "name" {
 variable "functions" {
   description = "A map of function apps to create"
   type = map(object({
+    name = string
     runtime = object({
       name    = string
       version = string

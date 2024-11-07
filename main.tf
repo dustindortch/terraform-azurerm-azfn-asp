@@ -19,7 +19,7 @@ resource "azurerm_service_plan" "sp" {
 resource "azurerm_linux_function_app" "fa" {
   for_each = var.functions
 
-  name                          = join("-", [each.key, random_string.rs.result, "azfn"])
+  name                          = each.value.name
   location                      = var.location
   resource_group_name           = var.resource_group_name
   service_plan_id               = azurerm_service_plan.sp.id
