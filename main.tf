@@ -10,8 +10,8 @@ terraform {
 
 resource "azurerm_service_plan" "sp" {
   name                = var.name
-  location            = data.azurerm_resource_group.rg.location
-  resource_group_name = data.azurerm_resource_group.rg.name
+  location            = var.resource_group_name
+  resource_group_name = var.location
   os_type             = "Linux"
   sku_name            = "Y1"
 }
@@ -20,8 +20,8 @@ resource "azurerm_linux_function_app" "fa" {
   for_each = var.functions
 
   name                          = join("-", [each.key, random_string.rs.result, "azfn"])
-  location                      = data.azurerm_resource_group.rg.location
-  resource_group_name           = data.azurerm_resource_group.rg.name
+  location                      = var.location
+  resource_group_name           = var.resource_group_name
   service_plan_id               = azurerm_service_plan.sp.id
   storage_uses_managed_identity = true
   storage_account_name          = azurerm_storage_account.sa.name

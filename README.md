@@ -32,7 +32,9 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_functions"></a> [functions](#input\_functions) | A map of function apps to create | <pre>map(object({<br>    runtime = object({<br>      name    = string<br>      version = string<br>    })<br>  }))</pre> | n/a | yes |
+| <a name="input_location"></a> [location](#input\_location) | The location in which to create the resources | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | The name of the App Service Plan | `string` | n/a | yes |
+| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which to create the resources | `string` | n/a | yes |
 
 ## Outputs
 
