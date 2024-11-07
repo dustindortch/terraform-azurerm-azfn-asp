@@ -22,3 +22,8 @@ variable "location" {
   description = "The location in which to create the resources"
   type        = string
 }
+
+variable "storage_account_name" {
+  description = "The name of the storage account to use for the function apps"
+  type        = string
+}

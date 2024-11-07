@@ -24,7 +24,7 @@ resource "azurerm_linux_function_app" "fa" {
   resource_group_name           = var.resource_group_name
   service_plan_id               = azurerm_service_plan.sp.id
   storage_uses_managed_identity = true
-  storage_account_name          = azurerm_storage_account.sa.name
+  storage_account_name          = var.storage_account_name
 
   identity {
     type = "SystemAssigned"

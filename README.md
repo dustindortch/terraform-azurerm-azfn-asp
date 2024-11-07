@@ -35,6 +35,7 @@ No modules.
 | <a name="input_location"></a> [location](#input\_location) | The location in which to create the resources | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | The name of the App Service Plan | `string` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which to create the resources | `string` | n/a | yes |
+| <a name="input_storage_account_name"></a> [storage\_account\_name](#input\_storage\_account\_name) | The name of the storage account to use for the function apps | `string` | n/a | yes |
 
 ## Outputs
 
